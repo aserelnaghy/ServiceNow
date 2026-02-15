@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | GreenFresh</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar (reuse your existing navbar HTML) -->
+    <nav class="navbar">
+        <div class="logo">GreenFresh</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fruits.html">Fruits</a></li>
+            <li><a href="herbs.html">Herbs</a></li>
+            <li><a href="vegetables.html">Vegetables</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-page">
+        <h1 class="page-title">Contact Us</h1>
+        <p class="contact-subtitle">
+            Have a question about our organic produce, delivery, or offers? Send us a message and we’ll get back to you.
+        </p>
+
+        <div class="contact-grid">
+
+            <!-- Left: Info -->
+            <div class="contact-card contact-info">
+                <h2>Get in touch</h2>
+
+                <div class="info-row">
+                    <span class="info-label">Phone</span>
+                    <span class="info-value">+20 100 000 0000</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Email</span>
+                    <span class="info-value">support@greenfresh.com</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Address</span>
+                    <span class="info-value">
+                        12 Green Street, Maadi<br />
+                        Cairo, Egypt
+                    </span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Hours</span>
+                    <span class="info-value">Sun–Thu: 10:00 AM – 8:00 PM</span>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="contact-card">
+                <h2>Send a message</h2>
+
+                <form class="contact-form">
+                    <div class="form-row">
+                        <label for="name">Full Name</label>
+                        <input id="name" type="text" placeholder="Your name" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="you@example.com" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder="How can we help?" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="add-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 GreenFresh. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

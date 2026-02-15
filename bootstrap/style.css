@@ -1,0 +1,131 @@
+:root {
+    --brand-green: #2e7d32;
+    --brand-yellow: #ffe329;
+    --brand-yellow-hover: #e6c200;
+}
+
+/* Global */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-greenfresh {
+    background: var(--brand-green);
+}
+
+.navbar-greenfresh .navbar-brand,
+.navbar-greenfresh .nav-link {
+    color: #fff !important;
+}
+
+.navbar-greenfresh .nav-link:hover {
+    opacity: .8;
+}
+
+/* Buttons */
+.btn-brand {
+    background: var(--brand-yellow);
+    border: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.btn-brand:hover {
+    background: var(--brand-yellow-hover);
+    color: #000;
+}
+
+/* Hero */
+.hero {
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+        url("https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/styles/16_9_1000w/public/2025/10/nrd-on-unsplash.png?h=6eb229a4&itok=7ITUm1lU");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Category cards */
+.category-tile {
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.category-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.category-tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    transition: background .25s ease;
+}
+
+.category-tile:hover::after {
+    background: rgba(0, 0, 0, .2);
+}
+
+.category-tile h3 {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    margin: 0;
+}
+
+/* Product images in cards */
+.product-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Offers coupon style */
+.coupon {
+    border: 2px dashed #dcdcdc;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.coupon-badge {
+    min-width: 140px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.coupon-badge .big {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.coupon-badge .small {
+    font-size: .95rem;
+    letter-spacing: 1px;
+}
+
+.coupon-code {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 2px dashed currentColor;
+    border-radius: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+.site-footer {
+    background: #000;
+    color: #fff;
+}
