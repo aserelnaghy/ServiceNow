@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Weather Check</h3>
+    <input type="text" id="cityInput">
+    <button onclick="getWeather(document.getElementById('cityInput').value)">Check Weather</button>
+    <br>
+    <span id="weatherResult"></span>
+</body>
+
+</html>
+
+<script>
+    // function getData() {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => { resolve("Data received") }, 2000);
+    //     });
+    // }
+
+    // getData().then(result => console.log(result))
+
+    // function getUser(id, name) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if (id >= 0) {
+    //                 resolve({id: id, name: name});
+    //             }
+    //             else {
+    //                 reject("Invalid ID");
+    //             }
+    //         }, 5000)
+    //     })
+    // }
+
+    // getUser(1,"Aser").then(user => console.log(user)).catch(error => console.error(error));
+    
+    
+    
+    // TASK
+    //Fake Weather App 
+    // click button -> shows loading for 2 seconds 
+    // if city = paris, show sucess
+    // any other city shows error 
+    // using promises async/await try and catch
+
+    // function getWeather(city) {
+    //     document.getElementById("weatherResult").innerText = "Loading...";
+    //     new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             if (city.toLowerCase() === "paris") {
+    //                 resolve("The weather in Paris is sunny");
+    //             }
+    //             else {
+    //                 reject("City not found");
+    //             }
+    //         }, 2000);
+    //     })
+    //         .then(result => document.getElementById("weatherResult").innerText = result)
+    //         .catch(error => document.getElementById("weatherResult").innerText = error);
+    // }
+
+    //TASK
+    fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response => response.json())
+        .then(json => {
+            const completedCount = json.filter(todo => todo.completed === true).length;
+            console.log("Completed Todos Count: ", completedCount);
+            const filteredTodos = json.filter(todo => todo.title.length > 20);
+            console.log("Filtered Todos:", filteredTodos);
+
+            const mappedTodos = json.map(todo => ({
+                id: todo.id,
+                titleLength: todo.title.length
+            }));
+            console.log("Mapped Todos:", mappedTodos);
+        })
+
+
+
+</script>
